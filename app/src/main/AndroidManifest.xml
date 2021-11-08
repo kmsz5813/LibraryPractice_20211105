@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LibraryPractice_20211105">
-        <activity android:name=".SplashActivity"></activity>
+
+
+
+
         <activity
             android:name=".ViewPhotoActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
