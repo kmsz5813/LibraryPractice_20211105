@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,8 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setupEvents()
         setValuse()
+
     }
 
+//         새로운 함수를 오버라이드 밑에 새로 넣어서.
     fun setupEvents() {
 
         btnCall.setOnClickListener {
@@ -27,6 +30,8 @@ class MainActivity : AppCompatActivity() {
 //            권한 획득.
 //            1) 권한 여하에 따른 상황별 대처 방안. 미리 변수에 담아두자.
             val permissionListener = object : PermissionListener {
+//                Alt + Enter를 눌러 에러를 해결하자 ( object 에러 해결)
+
                 override fun onPermissionGranted() {
 
 //                    권한이 최종 획득 ok 일때 실행할 코드.
@@ -70,6 +75,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setValuse() {
+
+        Glide.with(this).load("https://newsimg.sedaily.com/2019/12/31/1VSAE95B8P_1.jpg").into(imgAction)
 
 
     }
